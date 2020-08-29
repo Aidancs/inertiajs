@@ -7,7 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('dashboard', [DashboardController::class, 'index']);
+});
 
 Auth::routes();
 

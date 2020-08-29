@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p>This is Dashboard</p>
+		<p>This is Dashboard, {{fname}} {{lname}}</p>
 	</div>
 </template>
 
